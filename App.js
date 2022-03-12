@@ -2,32 +2,33 @@ import { View } from "react-native";
 
 export default function App() {
   return (
+    //In this example, notice how the children are laid out in columns
+    //This is different from flex in web, where they would be laid out in rows
     <View
       style={{
         backgroundColor: "#fff",
         flex: 1,
       }}
     >
-      {/*
-      The parent has flex: 1, meaning it will fill the screen
-      Since all the children have flex: 1, it means they will fill an equal amount
-      */}
       <View
         style={{
           backgroundColor: "dodgerblue",
-          flex: 1,
+          width: 100,
+          height: 100,
         }}
       />
       <View
         style={{
           backgroundColor: "gold",
-          flex: 1,
+          width: 100,
+          height: 100,
         }}
       />
       <View
         style={{
           backgroundColor: "red",
-          flex: 1,
+          width: 100,
+          height: 100,
         }}
       />
     </View>
