@@ -11,14 +11,14 @@ export default function App() {
         flexDirection: "row", //main axis is the horizontal axis
         justifyContent: "center", //aligns along the main axis
         alignItems: "center", //secondary axis
-        flexWrap: "wrap", //notice how this changes the vertical alignment...
+        flexWrap: "wrap", //notice how this changes the vertical alignment. The items are now aligned vertically within each row (and not within the screen)
       }}
     >
       <View
         style={{
           backgroundColor: "dodgerblue",
           width: 100,
-          height: 100,
+          height: 300,
         }}
       />
       <View
