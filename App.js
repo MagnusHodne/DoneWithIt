@@ -27,6 +27,7 @@ export default function App() {
           height: 100,
           top: 20,
           left: 20,
+          position: "absolute",
         }}
       />
       <View
