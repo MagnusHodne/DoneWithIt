@@ -1,31 +1,35 @@
-import {
-  StyleSheet,
-  SafeAreaView,
-  View,
-  StatusBar,
-  Platform,
-} from "react-native";
+import { View } from "react-native";
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
+    <View
+      style={{
+        backgroundColor: "#fff",
+        flex: 1,
+      }}
+    >
+      {/*
+      The parent has flex: 1, meaning it will fill the screen
+      Since all the children have flex: 1, it means they will fill an equal amount
+      */}
       <View
         style={{
           backgroundColor: "dodgerblue",
-          width: "100%",
-          height: "30%",
-          alignSelf: "center",
+          flex: 1,
         }}
-      ></View>
-    </SafeAreaView>
+      />
+      <View
+        style={{
+          backgroundColor: "gold",
+          flex: 1,
+        }}
+      />
+      <View
+        style={{
+          backgroundColor: "red",
+          flex: 1,
+        }}
+      />
+    </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    /*SafeAreaView does not work on android (in may 2020), so we need to check for platform to add padding instead*/
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  },
-});
