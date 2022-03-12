@@ -17,7 +17,7 @@ export default function App() {
         style={{
           backgroundColor: "dodgerblue",
           width: 400,
-          flexShrink: 1, //Kinda the opposite of flexGrow - if we have overflow, shrink me to fit
+          flex: -1,
           height: 100,
         }}
       />
