@@ -11,15 +11,13 @@ export default function App() {
         flexDirection: "row", //main axis is the horizontal axis
         justifyContent: "center", //aligns along the main axis
         alignItems: "center", //secondary axis
-        alignContent: "center", //centers everything vertically (center of screen) - only applies when we have wrapping
-        flexWrap: "wrap", //centers vertically in each row
       }}
     >
       <View
         style={{
           backgroundColor: "dodgerblue",
-          flexBasis: 100,
-          flexGrow: 1,
+          width: 400,
+          flexShrink: 1, //Kinda the opposite of flexGrow - if we have overflow, shrink me to fit
           height: 100,
         }}
       />
