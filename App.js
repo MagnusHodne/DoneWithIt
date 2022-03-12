@@ -1,8 +1,7 @@
 import {
   StyleSheet,
-  Button,
   SafeAreaView,
-  Alert,
+  View,
   StatusBar,
   Platform,
 } from "react-native";
@@ -10,13 +9,14 @@ import {
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Button
-        color={"orange"}
-        title={"Click me!"}
-        onPress={() =>
-          Alert.prompt("My title", "My message", (text) => console.log(text))
-        }
-      />
+      <View
+        style={{
+          backgroundColor: "dodgerblue",
+          width: "75%",
+          height: "30%",
+          alignSelf: "center",
+        }}
+      ></View>
     </SafeAreaView>
   );
 }
