@@ -8,7 +8,7 @@ export default function App() {
       style={{
         backgroundColor: "#fff",
         flex: 1,
-        flexDirection: "row", //main axis is the horizontal axis
+        flexDirection: "column", //main axis is the vertical axis
         justifyContent: "center", //aligns along the main axis
       }}
     >
