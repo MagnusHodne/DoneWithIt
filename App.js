@@ -11,6 +11,7 @@ export default function App() {
         flexDirection: "row", //main axis is the horizontal axis
         justifyContent: "center", //aligns along the main axis
         alignItems: "center", //secondary axis
+        flexWrap: "wrap", //notice how this changes the vertical alignment...
       }}
     >
       <View
