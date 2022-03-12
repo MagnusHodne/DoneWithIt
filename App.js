@@ -10,13 +10,15 @@ export default function App() {
         flex: 1,
         flexDirection: "row", //main axis is the horizontal axis
         justifyContent: "center", //aligns along the main axis
-        alignItems: "stretch", //default value
+        alignItems: "center", //secondary axis
       }}
     >
       <View
         style={{
           backgroundColor: "dodgerblue",
+          alignSelf: "flex-start",
           width: 100,
+          height: 300,
         }}
       />
       <View
