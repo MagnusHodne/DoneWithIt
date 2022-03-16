@@ -3,6 +3,7 @@ import { FlatList, View } from "react-native";
 import Screen from "../components/Screen";
 
 import ListItem from "../components/ListItem";
+import ListItemSeparator from "../components/ListItemSeparator";
 
 const messages = [
   {
@@ -18,7 +19,7 @@ const messages = [
     image: require("../assets/mosh.jpg"),
   },
 ];
-function MessagesScreen(props) {
+function MessagesScreen() {
   return (
     <Screen>
       <FlatList
@@ -31,6 +32,7 @@ function MessagesScreen(props) {
             image={item.image}
           />
         )}
+        ItemSeparatorComponent={ListItemSeparator}
       />
     </Screen>
   );
