@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import AppText from "./app/components/text/AppText";
+import AppText from "./app/components/AppText";
 
 export default function App() {
   return (
