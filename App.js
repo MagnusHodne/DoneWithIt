@@ -18,6 +18,7 @@ export default function App() {
           shadowOffset: { width: 5, height: 10 },
           shadowOpacity: 1,
           shadowRadius: 10,
+          elevation: 10 /*This is the only shadow property on Android - it is less customizable*/,
         }}
       />
     </View>
