@@ -1,5 +1,5 @@
-import { Text, View, Platform } from "react-native";
-import AppText from "./app/components/text/AppText";
+import { View } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default function App() {
   return (
@@ -10,9 +10,7 @@ export default function App() {
         alignItems: "center",
       }}
     >
-      <AppText>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, odit.
-      </AppText>
+      <MaterialCommunityIcons name={"email"} size={60} color={"gold"} />
     </View>
   );
 }
