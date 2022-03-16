@@ -2,23 +2,30 @@ import React from "react";
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 
 import colors from "../config/colors";
+import texts from "../config/texts";
+import AppButton from "../components/AppButton";
+import AppText from "../components/AppText";
 
 function WelcomeScreen(props) {
   return (
     <ImageBackground
       style={styles.background}
       source={require("../assets/background.jpg")}
+      blurRadius={10}
     >
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require("../assets/logo-red.png")} />
-        <Text>Sell what you don't need</Text>
+        <AppText textType={texts.h1}>Sell what you don't need</AppText>
       </View>
-      <View style={styles.loginButton}>
-        <Text>Login</Text>
-      </View>
-      <View style={styles.registerButton}>
-        <Text>Register</Text>
-      </View>
+      <AppButton color={colors.primary} onPress={() => console.log("Login")}>
+        Login
+      </AppButton>
+      <AppButton
+        color={colors.secondary}
+        onPress={() => console.log("Register")}
+      >
+        Register
+      </AppButton>
     </ImageBackground>
   );
 }
