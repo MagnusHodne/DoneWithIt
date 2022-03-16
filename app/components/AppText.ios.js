@@ -3,8 +3,8 @@ import { StyleSheet, Text } from "react-native";
 
 import texts from "../config/texts";
 
-function AppText({ children, type = texts.body }) {
-  return <Text style={[styles.text, { ...type }]}>{children}</Text>;
+function AppText({ children, style = texts.body }) {
+  return <Text style={[styles.text, style]}>{children}</Text>;
 }
 
 const styles = StyleSheet.create({
