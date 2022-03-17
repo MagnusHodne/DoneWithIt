@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Image, StyleSheet } from "react-native";
 import { Formik } from "formik";
 import * as Yup from "yup";
-import Screen from "../components/Screen";
-import AppTextInput from "../components/AppTextInput";
+
 import AppButton from "../components/AppButton";
-import AppText from "../components/AppText";
+import AppTextInput from "../components/AppTextInput";
+import ErrorMessage from "../components/ErrorMessage";
+import Screen from "../components/Screen";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required().email().label("Email"),
@@ -23,7 +24,7 @@ function LoginScreen(props) {
         onSubmit={(values) => console.log(values)}
         validationSchema={validationSchema}
       >
-        {({ handleChange, handleSubmit, errors }) => (
+        {({ handleChange, handleSubmit, errors, setFieldTouched, touched }) => (
           <>
             <AppTextInput
               autoCapitalize={"none"}
@@ -31,20 +32,23 @@ function LoginScreen(props) {
               placeholder={"Email"}
               icon={"email"}
               keyboardType={"email-address"}
+              onBlur={() => setFieldTouched("email")}
               onChangeText={handleChange("email")}
               textContentType={"emailAddress"} /*Allows autofill on iOS*/
             />
-            <AppText style={{ color: "red" }}>{errors.email}</AppText>
+            <ErrorMessage error={errors.email} visible={touched.email} />
+
             <AppTextInput
               autoCapitalize={"none"}
               autoCorrect={false}
               icon={"lock"}
               placeholder={"Password"}
               secureTextEntry
+              onBlur={() => setFieldTouched("password")}
               onChangeText={handleChange("password")}
               textContentType={"password"}
             />
-            <AppText style={{ color: "red" }}>{errors.password}</AppText>
+            <ErrorMessage error={errors.password} visible={touched.password} />
             <AppButton title={"Login"} onPress={handleSubmit} />
           </>
         )}
