@@ -1,7 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, TouchableHighlight } from "react-native";
-import colors from "../config/colors";
-function AppButton({ title, onPress, color = "primary" }) {
+import defaultStyles from "../config/styles";
+
+function AppButton({ title, onPress, color = defaultStyles.colors.primary }) {
   return (
     <TouchableHighlight
       activeOpacity={0.3}
@@ -16,7 +17,7 @@ function AppButton({ title, onPress, color = "primary" }) {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: colors.primary,
+    backgroundColor: defaultStyles.colors.primary,
     borderRadius: 30,
     padding: 15,
     margin: 5,
